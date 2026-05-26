@@ -1,0 +1,5 @@
+import { z } from "zod";
+export const loginSchema = z.object({ email: z.string().email(), password: z.string().min(8) });
+export type LoginInput = z.infer<typeof loginSchema>;
+export const signupSchema = z.object({ fullName: z.string().min(2), email: z.string().email(), password: z.string().min(8), confirmPassword: z.string().min(8) }).refine((v)=>v.password===v.confirmPassword,{path:["confirmPassword"],message:"Passwords must match"});
+export type SignupInput = z.infer<typeof signupSchema>;
