@@ -1,0 +1,2 @@
+import { Plus, Search } from "lucide-react";
+export function Topbar(){return <header className="sticky top-0 z-10 flex items-center justify-between border-b bg-stone-50/90 p-4 backdrop-blur"><div className="flex items-center gap-2 text-sm text-stone-500"><Search className="h-4 w-4"/>Search</div><button className="rounded-full bg-black px-4 py-2 text-sm text-white"><Plus className="mr-1 inline h-4 w-4"/>Quick add</button></header>}
